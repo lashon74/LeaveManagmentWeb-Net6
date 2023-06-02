@@ -22,8 +22,9 @@ namespace LeaveManagment.Web.Controllers
         // GET: LeaveTypes
         public async Task<IActionResult> Index()
         {
-              return _context.leaveTypes != null ? 
-                          View(await _context.leaveTypes.ToListAsync()) :
+            var leaveType = _context.leaveTypes;
+              return leaveType != null ? 
+                          View(await leaveType.ToListAsync()) : //Select * from leave types
                           Problem("Entity set 'ApplicationDbContext.leaveTypes'  is null.");
         }
 
