@@ -9,7 +9,7 @@ namespace LeaveManagment.Web.Data
             : base(options)
         {
         }
-
+        //References tables create for project
         public DbSet<LeaveType> leaveTypes { get; set; }
         public DbSet<LeaveAllocation> leaveAllocations { get; set; }
 
